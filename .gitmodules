@@ -1,0 +1,9 @@
+[submodule "openvpn"]
+	path = openvpn
+	url = git@github.com:wget/chocolatey_package_openvpn.git
+[submodule "openvpn_community"]
+	path = openvpn_community
+	url = git@github.com:wget/chocolatey_package_openvpn_community.git
+[submodule "keeweb"]
+	path = keeweb
+	url = git@github.com:wget/chocolatey_package_keeweb.git
