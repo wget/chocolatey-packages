@@ -36,7 +36,7 @@ Please note that some packages make use of a [library](https://github.com/wget/c
 
     git clone --recursive git@github.com:wget/chocolatey_package_<package name>.git
 
-If you want to be able to publish changes to that library as well, either clone it as a separate repository or use the git submodules commands described above in the [Work with all packages section](#Work_with_all_packages).
+If you want to be able to publish changes to that library as well, either clone it as a separate repository or use the git submodules commands described above in the [Work with all packages section](#work-with-all-packages).
 
 ## Prerequisites
 
