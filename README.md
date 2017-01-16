@@ -8,6 +8,16 @@ Each package consists in a git submodule. This way, packages are independant of 
 
 You have two ways when working with this repository. Either work with all of the packages or work with the one you are interested in.
 
+Also, since all packages use an URL starting with git@github.com: for the SSH protocol. If you want to use this repository for automation, this will require you to type in the passphrase to your SSH key if any. When updating submodules with `git submodule update`, the passphrase to the SSH key is not asked again and the update will fail. This might also be a problem as this forces you to have a Github account in order to be able to clone. This is why you might use the https connection instead. According to our test, if you are not using the `--global` argument, this does not work. Even if this alters your .gitconfig personal configuration, since the URL match is quite long, this reduce the risks to override other custom parameters you might have.
+
+    git config --global url.https://github.com/wget/chocolatey_.insteadOf "git@github.com:wget/chocolatey_"
+
+Note that if you use this command, this will alter the way you commit as well. If you want to be still able to commit using ssh, type the following command. Even if both arguments are the same, this is [not a typo](https://groups.google.com/forum/#!topic/repo-discuss/jQq2Rn3gd0Q).
+
+    git config --global url.git@github.com:wget/chocolatey_.pushInsteadOf "git@github.com:wget/chocolatey_"
+
+To learn more about how the git/ssh/https protocols can be used at GitHub, read [this article](https://gist.github.com/grawity/4392747).
+
 ### Work with all packages
 
 * Since adding submodules freezes the state of the submodules from the moment they were added to this repository, simply cloning will not be enough. You will need to get upstream changes for these repositories as well.
