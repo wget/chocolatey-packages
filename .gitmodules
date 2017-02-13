@@ -1,9 +1,12 @@
 [submodule "openvpn"]
 	path = openvpn
-	url = git@github.com:wget/chocolatey_package_openvpn.git
+	url = git@github.com:wget/chocolatey-package-openvpn.git
 [submodule "openvpn_community"]
-	path = openvpn_community
-	url = git@github.com:wget/chocolatey_package_openvpn_community.git
+	path = openvpn-community
+	url = git@github.com:wget/chocolatey-package-openvpn-community.git
 [submodule "keeweb"]
 	path = keeweb
-	url = git@github.com:wget/chocolatey_package_keeweb.git
+	url = git@github.com:wget/chocolatey-package-keeweb.git
+[submodule "securepointsslvpn"]
+	path = securepointsslvpn
+	url = git@github.com:wget/chocolatey-package-securepointsslvpn.git

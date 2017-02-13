@@ -14,13 +14,13 @@ All the submodules from this repository use a URL starting with `git@github.com`
 
 This is why you might want to use https instead. Git provides a solution to rewrite source URL on the fly by altering your personal Git configuration.
 
-    git config --global url.https://github.com/wget/chocolatey_.insteadOf "git@github.com:wget/chocolatey_"
+    git config --global url.https://github.com/wget/chocolatey.insteadOf "git@github.com:wget/chocolatey"
 
 According to our test, if you do not use the `--global` argument which stores customizations to the user Git configuration file (.gitconfig), the URL of the submodules is not altered and this does not work. Since the URL match is quite long, this reduces the risks of overriding other custom parameters you might have.
 
 Note that if you use this command, this will alter the way you commit as well. Additionally, if you want to be still able to commit using ssh, type the following command. Even if both arguments are the same, this is [not a typo](https://groups.google.com/forum/#!topic/repo-discuss/jQq2Rn3gd0Q).
 
-    git config --global url.git@github.com:wget/chocolatey_.pushInsteadOf "git@github.com:wget/chocolatey_"
+    git config --global url.git@github.com:wget/chocolatey.pushInsteadOf "git@github.com:wget/chocolatey"
 
 To learn more about how the git/ssh/https protocols can be used at GitHub, read [this article](https://gist.github.com/grawity/4392747).
 
@@ -35,7 +35,7 @@ If you are not familiar with advanced concepts of Git submodules, reading the [c
  
 The following commands take care of these two caveats.
 
-    git clone --recursive git@github.com:wget/chocolatey_packages.git
+    git clone --recursive git@github.com:wget/chocolatey-packages.git
     git submodule foreach 'git checkout master'
 
 Now, you will be able to work on these submodules and commit upstream directly from the submodule directory.
@@ -56,9 +56,9 @@ Push changes made in submodules, then try to push changes made to this parent di
 
 Simply click on the submodule folder in the Web UI, this should lead you to the URL of the submodule on Github. The workfload is as usual from there.
 
-Please note that some packages make use of a [library](https://github.com/wget/chocolatey_custom_functions) used as a submodule. In that case, use the following command:
+Please note that some packages make use of a [library](https://github.com/wget/chocolatey-custom-functions) used as a submodule. In that case, use the following command:
 
-    git clone --recursive git@github.com:wget/chocolatey_package_<package name>.git
+    git clone --recursive git@github.com:wget/chocolatey-package-<package name>.git
 
 If you want to be able to publish changes to that library as well, either clone it as a separate repository or use the git submodules commands from [above](#working-with-all-packages).
 
