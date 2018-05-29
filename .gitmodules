@@ -10,3 +10,6 @@
 [submodule "securepointsslvpn"]
 	path = securepointsslvpn
 	url = git@github.com:wget/chocolatey-package-securepointsslvpn.git
+[submodule "mattermost-desktop"]
+	path = mattermost-desktop
+	url = git@github.com:wget/chocolatey-package-mattermost-desktop.git
